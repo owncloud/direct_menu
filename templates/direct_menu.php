@@ -1,16 +1,16 @@
 @media only screen and (min-width: <?php p($_['width']); ?>px) {
+
 	#navigation {
 		margin: 0;
 		padding: 0;
 		position: absolute;
 		top: 0;
-		left: 80px;
+		left: calc(50% - <?php p($_['width']/3); ?>px);
 		box-shadow: none;
 		overflow: visible !important;
 		width: auto;
 		background-color: transparent;
 		display: block !important;
-		position: fixed;
 	}
 
 	#navigation #apps {
@@ -73,10 +73,6 @@
 		width: 18px;
 		height: 18px;
 		margin: -10px 0 0 -10px;
-<?php if($_['inverted']===true) { ?>
-	border: 2px solid rgba(150, 150, 150, 0.5) !important;
-	border-top-color: rgba(150, 150, 150, 1) !important;
-<?php } ?>
 	}
 
 	#navigation div li span {
@@ -147,8 +143,14 @@
 		border-width: 9px;
 	}
 
-	a.menutoggle .icon-caret {
+	a.menutoggle .icon-caret, a.menutoggle .burger {
 		display: none !important;
+	}
+	a.menutoggle .header-appname {
+		cursor: default;
+	}
+	#header #owncloud {
+		display: none;
 	}
 
 	#navigation svg {
@@ -159,10 +161,6 @@
 	#navigation svg image {
 		width: 100%;
 		height: 100%;
-<?php if($_['inverted']===false) { ?>
-		-webkit-filter: none;
-		filter: none;
-<?php } ?>
 	}
 
 	#navigation a svg,

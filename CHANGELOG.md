@@ -1,3 +1,8 @@
+## 0.11.0
+### Changed
+- Support ownCloud 10.0
+- Drop nextcloud specific code
+
 ## 0.10.2
 ### Changed
 - Remove signatures file from release to avoid errors with Nextcloud 12

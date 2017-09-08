@@ -2,6 +2,7 @@
 /**
  * @copyright Copyright (c) 2016 Julius Härtl <jus@bitgrid.net>
  *
+ * @author Jörn Friedrich Dreyer <jfd@butonic.de>
  * @author Julius Härtl <jus@bitgrid.net>
  *
  * @license GNU AGPL version 3 or any later version
@@ -29,6 +30,11 @@ use OCP\IRequest;
 
 class AppController extends \OCP\AppFramework\Controller {
 
+	/**
+	 * @var ITimeFactory
+	 */
+	protected $timeFactory;
+
 	public function __construct($appName, IRequest $request, ITimeFactory $timeFactory) {
 		parent::__construct($appName, $request);
 		$this->timeFactory = $timeFactory;
@@ -41,12 +47,6 @@ class AppController extends \OCP\AppFramework\Controller {
 	 * @return DataDownloadResponse
 	 */
 	public function stylesheet() {
-		$inverted = false;
-		if(\OCP\App::isEnabled('theming') && class_exists('\OCA\Theming\Util')) {
-			$color = \OC::$server->getThemingDefaults()->getMailHeaderColor();
-			$util = \OC::$server->query(\OCA\Theming\Util::class);
-			$inverted = $util->invertTextColor($color);
-		}
 
 		$navigation = \OC::$server->getNavigationManager()->getAll();
 		$navigationCount = count($navigation);
@@ -58,7 +58,6 @@ class AppController extends \OCP\AppFramework\Controller {
 
 		$params = [
 			'width' => $width,
-			'inverted' => $inverted
 		];
 		$template = new TemplateResponse('direct_menu', 'direct_menu', $params, 'blank');
 		$response = new DataDownloadResponse($template->render(), 'style', 'text/css');

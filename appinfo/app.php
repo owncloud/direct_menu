@@ -2,6 +2,7 @@
 /**
  * @copyright Copyright (c) 2016 Julius Härtl <jus@bitgrid.net>
  *
+ * @author Jörn Friedrich Dreyer <jfd@butonic.de>
  * @author Julius Härtl <jus@bitgrid.net>
  * @author Felix Epp <work@felixepp.de>
  *
@@ -22,17 +23,10 @@
  *
  */
 
-$linkToCSS = \OC::$server->getURLGenerator()->linkToRoute(
-	'direct_menu.App.stylesheet',
-	[
-		'v' => \OC::$server->getConfig()->getAppValue('theming', 'cachebuster', '0'),
-	]
-);
-
 \OCP\Util::addHeader(
 	'link',
 	[
 		'rel' => 'stylesheet',
-		'href' => $linkToCSS,
+		'href' => \OC::$server->getURLGenerator()->linkToRoute('direct_menu.App.stylesheet')
 	]
 );
