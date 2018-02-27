@@ -4,12 +4,12 @@
     <name>Direct Menu</name>
     <description>Provide easy access to all apps in the header.</description>
     <category>customization</category>
-    <version>0.11.0</version>
+    <version>0.12.0</version>
     <licence>AGPL</licence>
     <author>Jörn Friedrich Dreyer</author>
     <author>Julius Härtl</author>
     <dependencies>
-        <owncloud min-version="10.0" max-version="10.0" />
+        <owncloud min-version="10.0" max-version="10.1" />
     </dependencies>
     <repository type="git">https://github.com/butonic/direct_menu.git</repository>
     <bugs>https://github.com/butonic/direct_menu/issues</bugs>

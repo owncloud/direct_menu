@@ -1,10 +1,8 @@
 <?php
 /**
- * @copyright Copyright (c) 2016 Julius Härtl <jus@bitgrid.net>
+ * @copyright Copyright (c) 2018 Jörn Friedrich Dreyer <jfd@butonic.de>
  *
  * @author Jörn Friedrich Dreyer <jfd@butonic.de>
- * @author Julius Härtl <jus@bitgrid.net>
- * @author Felix Epp <work@felixepp.de>
  *
  * @license GNU AGPL version 3 or any later version
  *
@@ -22,11 +20,4 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *
  */
-
-\OCP\Util::addHeader(
-	'link',
-	[
-		'rel' => 'stylesheet',
-		'href' => \OC::$server->getURLGenerator()->linkToRoute('direct_menu.App.stylesheet')
-	]
-);
+\OCP\Util::addStyle('direct_menu', 'styles');
