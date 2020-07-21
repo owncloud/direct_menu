@@ -1,14 +1,15 @@
 @media only screen and (min-width: <?php p($_['width']); ?>px) {
 
 	#navigation {
-		margin: 0;
+		margin: 0 auto;
 		padding: 0;
-		position: absolute;
+		position: relative;
 		top: 0;
-		left: calc(50% - <?php p($_['width']/3); ?>px);
+		left: 0;
 		box-shadow: none;
 		overflow: visible !important;
-		width: auto;
+		width: <?php p($_['navigation_width']); ?>px;
+		max-width: none;
 		background-color: transparent;
 		display: block !important;
 	}
@@ -19,7 +20,6 @@
 
 	#navigation div ul {
 		position: relative;
-		margin-left: 170px;
 	}
 
 	#navigation div ul:after {

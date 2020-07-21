@@ -58,6 +58,7 @@ class AppController extends \OCP\AppFramework\Controller {
 
 		$params = [
 			'width' => $width,
+			'navigation_width' => $navigationCount*50
 		];
 		$template = new TemplateResponse('direct_menu', 'direct_menu', $params, 'blank');
 		$response = new DataDownloadResponse($template->render(), 'style', 'text/css');
