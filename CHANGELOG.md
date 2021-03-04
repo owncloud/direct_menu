@@ -1,6 +1,6 @@
 ## 0.11.0
 ### Changed
-- Support ownCloud 10.0
+- Support ownCloud 10.5
 - Drop nextcloud specific code
 
 ## 0.10.2
