@@ -1,14 +1,12 @@
 @media only screen and (min-width: <?php p($_['width']); ?>px) {
 
 	#navigation {
-		margin: 0 auto;
 		padding: 0;
-		position: relative;
 		top: 0;
-		left: 0;
+		left: 50%;
 		box-shadow: none;
 		overflow: visible !important;
-		width: <?php p($_['navigation_width']); ?>px;
+		margin-left: -<?php p($_['navigation_width']/2); ?>px;
 		max-width: none;
 		background-color: transparent;
 		display: block !important;
@@ -19,21 +17,10 @@
 	}
 
 	#navigation div ul {
-		position: relative;
-	}
-
-	#navigation div ul:after {
-		content: ".";
-		clear: both;
-		display: block;
-		visibility: hidden;
-		height: 0;
+		display:flex;
 	}
 
 	#navigation div ul li {
-		float: left;
-		padding: 0;
-		margin: 0;
 		height: 44px;
 	}
 
@@ -98,8 +85,6 @@
 		width: auto;
 		padding: 8px 12px;
 		background-color: #fff;
-		-webkit-border-radius: 3px;
-		-moz-border-radius: 3px;
 		border-radius: 3px;
 		border-top-left-radius: 0;
 		border-top-right-radius: 0;
@@ -165,7 +150,6 @@
 
 	#navigation a svg,
 	#navigation a span {
-		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
 		opacity: .5;
 	}
 
@@ -173,7 +157,6 @@
 	#navigation a:hover span,
 	#navigation a.active svg,
 	#navigation a.active span {
-		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
 		opacity: 1;
 	}
 }
