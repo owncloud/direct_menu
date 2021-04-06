@@ -1,4 +1,8 @@
-## 0.11.0 - 2021-03-05
+## [Unreleased]
+
+- -
+
+## [0.11.0] - 2021-03-05
 ### Changed
 - Support ownCloud 10.5 & 10.6
 - Drop nextcloud specific code
@@ -83,3 +87,7 @@
 ### Added
 - Show app title when selected
 - Show app title when hovering icon
+
+
+[Unreleased]: https://github.com/owncloud/direct_menu/compare/v0.11.0...master
+[0.11.0]: https://github.com/owncloud/admin_audit/compare/v0.10.2...v0.11.0
